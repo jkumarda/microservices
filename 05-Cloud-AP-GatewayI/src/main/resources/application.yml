@@ -1,0 +1,21 @@
+spring:
+  cloud:
+    gateway:
+      routes:
+      - id: welcome-api
+        uri: lb://Welcome-API
+        predicates:
+          - Path=/welcome
+      - id: greetings-api
+        uri: lb://Greetings-API
+        predicates:
+          - Path=/greets
+      httpclient:
+        connect-timeout: 30000
+        response-timeout: 30000
+
+  application:
+    name: Cloud-API-Gateway
+
+server:
+  port: 3333

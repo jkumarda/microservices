@@ -1,0 +1,10 @@
+server:
+  port: 7073
+
+spring:
+  application:
+    name: product
+
+  config:
+    import: optional:configserver:http://localhost:7071
+

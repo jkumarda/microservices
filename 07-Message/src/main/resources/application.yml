@@ -1,0 +1,9 @@
+server:
+  port: 7072
+
+spring:
+  application:
+    name: message
+
+  config:
+    import: optional:configserver:http://localhost:7071
